@@ -3,11 +3,20 @@
 		<div class="container">
 			<ul>
 				<li v-for="(link, index) in links" :key="index">
-					<div class="li-container wrapper">
+					<div
+						class="li-container wrapper"
+						:class="{ active: active === index }"
+					>
 						<div class="short-link">
 							<a :href="link.to">{{ link.name }}</a>
 						</div>
-						<div class="dropdown-activator">
+						<div
+							class="dropdown-activator"
+							@click="active = active === index ? -1 : index"
+							@focusout="active = -1"
+							tabindex="0"
+							v-show="link.hasChildren"
+						>
 							<svg
 								aria-hidden="true"
 								focusable="false"
@@ -36,18 +45,25 @@ export default Vue.extend({
 	data: () => ({
 		links: [
 			{
-				name: 'Home',
-				to: '/'
+				name: 'Overview',
+				to: '/',
+				isExternal: false,
+				hasChildren: false
 			},
 			{
 				name: 'Forums',
-				to: '/forums'
+				to: '/forums',
+				isExternal: true,
+				hasChildren: true
 			},
 			{
 				name: 'Members',
-				to: '/members'
+				to: '/members',
+				isExternal: true,
+				hasChildren: true
 			}
-		]
+		],
+		active: -1
 	})
 });
 </script>
@@ -82,7 +98,11 @@ nav {
 					display: flex;
 					margin-right: 20px;
 					cursor: pointer;
-					// padding: 10px 0px;
+
+					&.active {
+						box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.35);
+						background: rgba(29, 64, 105, 0.5);
+					}
 
 					&:hover,
 					.short-link:hover,
@@ -110,6 +130,10 @@ nav {
 
 						&:hover {
 							opacity: 1;
+						}
+
+						&:focus {
+							outline: none;
 						}
 					}
 				}

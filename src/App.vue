@@ -74,7 +74,6 @@ import LmHeader from '@/components/layout/Header.vue';
 import LmStickyHeader from '@/components/layout/StickyHeader.vue';
 
 export default Vue.extend({
-	name: 'base',
 	components: {
 		LmHeader,
 		LmStickyHeader
