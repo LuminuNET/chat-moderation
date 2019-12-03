@@ -2,11 +2,7 @@
 	<header>
 		<div class="container">
 			<div class="branding wrapper">
-				<img
-					src="@/assets/style-logo.png"
-					alt="Luminu"
-					class="branding__logo"
-				/>
+				<img :src="image" alt="Luminu" class="branding__logo" />
 			</div>
 		</div>
 	</header>
@@ -15,12 +11,13 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-	name: 'LmHeader'
+	name: 'LmHeader',
+	props: ['image']
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/scss/_variables.scss';
+@import '../../scss/_variables.scss';
 
 header {
 	background-color: $lmColor1;
@@ -28,8 +25,6 @@ header {
 	.branding {
 		display: flex;
 		justify-content: center;
-		// align-items: center;
-		// height: 335px;
 
 		.branding__logo {
 			margin-top: 30px;

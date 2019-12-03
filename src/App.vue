@@ -1,70 +1,7 @@
 <template>
 	<div id="app">
-		<lm-header />
+		<lm-header :image="require('@/assets/style-logo.png')" />
 		<lm-sticky-header />
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
-		<h3>[WHITESPACE]</h3>
 	</div>
 </template>
 

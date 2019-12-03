@@ -8,7 +8,9 @@
 						:class="{ active: active === index }"
 					>
 						<div class="short-link">
-							<a :href="link.to">{{ link.name }}</a>
+							<a :href="link.to">{{
+								$t('navigation.' + link.name)
+							}}</a>
 						</div>
 						<div
 							class="dropdown-activator"
@@ -33,6 +35,12 @@
 						</div>
 					</div>
 				</li>
+
+				<li class="user-auth">
+					<p>
+						{{ $t('navigation.login') }}
+					</p>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -45,22 +53,22 @@ export default Vue.extend({
 	data: () => ({
 		links: [
 			{
-				name: 'Overview',
+				name: 'overview',
 				to: '/',
 				isExternal: false,
 				hasChildren: false
 			},
 			{
-				name: 'Forums',
-				to: '/forums',
+				name: 'home',
+				to: 'https://luminu.net/',
 				isExternal: true,
-				hasChildren: true
+				hasChildren: false
 			},
 			{
-				name: 'Members',
-				to: '/members',
+				name: 'forum',
+				to: 'https://luminu.net/forums',
 				isExternal: true,
-				hasChildren: true
+				hasChildren: false
 			}
 		],
 		active: -1
@@ -81,6 +89,7 @@ nav {
 
 	ul {
 		display: inline-flex;
+		width: 100%;
 
 		li {
 			list-style: none;
@@ -135,6 +144,29 @@ nav {
 						&:focus {
 							outline: none;
 						}
+					}
+				}
+			}
+
+			&.user-auth {
+				width: 100%;
+				display: flex;
+				flex-direction: row-reverse;
+
+				p {
+					transition: background 0.25s ease-out;
+					background: rgba($color: #161616, $alpha: 0.15);
+
+					font-size: 15px;
+					font-weight: 700;
+					text-transform: uppercase;
+					letter-spacing: 0.25px;
+					padding: 10px 10px;
+					color: white;
+					cursor: pointer;
+
+					&:hover {
+						background: rgba($color: #161616, $alpha: 0.3);
 					}
 				}
 			}
