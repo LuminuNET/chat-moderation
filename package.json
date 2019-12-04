@@ -53,8 +53,7 @@
 				{
 					"avoidEscape": true
 				}
-			],
-			"avoidEscape": true
+			]
 		},
 		"parserOptions": {
 			"parser": "@typescript-eslint/parser"
