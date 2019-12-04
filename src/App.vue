@@ -2,6 +2,7 @@
 	<div id="app">
 		<lm-header :image="require('@/assets/style-logo.png')" />
 		<lm-sticky-header />
+		<router-view />
 	</div>
 </template>
 
@@ -30,6 +31,8 @@ export default Vue.extend({
 body {
 	overflow-y: scroll;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: $background;
+	box-sizing: border-box;
 }
 
 .container {
