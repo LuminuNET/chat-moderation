@@ -86,6 +86,7 @@ nav {
 	height: 71px;
 	background-color: $lmColor2;
 	box-shadow: 0px 5px $lmColor3;
+	z-index: 100;
 
 	ul {
 		display: inline-flex;
