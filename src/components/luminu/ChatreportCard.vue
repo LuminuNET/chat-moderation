@@ -92,7 +92,8 @@
 			.info-group__title {
 				font-weight: 400;
 				color: rgba($color: #000000, $alpha: 0.5);
-				font-size: 16px;
+				font-size: 14px;
+				font-family: 'Rubik';
 			}
 
 			.info-group__content {
@@ -100,6 +101,8 @@
 				white-space: nowrap;
 				overflow: hidden;
 				max-width: 96%;
+				font-family: 'Rubik';
+				font-size: 16px;
 			}
 		}
 

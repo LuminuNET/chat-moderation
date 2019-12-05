@@ -14,7 +14,12 @@ const en = {
 		available: 'Available',
 		unavailable: 'Unavailable',
 		inProgress: 'In Progress',
-		takeOver: 'Take Over'
+		takeOver: 'Take Over',
+		reports: 'Reports',
+		activeModerators: 'Active Moderators',
+		enterQueue: 'Enter Queue',
+		searchChatreport: 'Search for Chatreport',
+		search: 'Search'
 	}
 };
 

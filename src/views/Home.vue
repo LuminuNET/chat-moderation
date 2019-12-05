@@ -17,7 +17,41 @@
 				:isAvailable="i < 6 ? true : false"
 			/>
 		</div>
-		<lm-card class="sidebar"></lm-card>
+		<lm-card class="sidebar">
+			<h3 class="sidebar__header">Luminu</h3>
+			<div class="sidebar__divider">
+				<hr />
+			</div>
+			<div class="sidebar__stat wrapper">
+				<p class="sidebar__stat__type">
+					{{ $t('monitoring.reports') }}:
+				</p>
+				<p class="sidebar__stat__value">7</p>
+			</div>
+			<div class="sidebar__stat wrapper">
+				<p class="sidebar__stat__type">
+					{{ $t('monitoring.activeModerators') }}:
+				</p>
+				<p class="sidebar__stat__value">2</p>
+			</div>
+			<div class="sidebar__btn sidebar__btn--queue">
+				<p class="sidebar__btn__content available">
+					{{ $t('monitoring.enterQueue') }}
+				</p>
+			</div>
+			<div class="sidebar__divider">
+				<hr />
+			</div>
+			<p class="sidebar__input-label">
+				{{ $t('monitoring.searchChatreport') }}
+			</p>
+			<input class="sidebar__input" type="text" placeholder="By Id.." />
+			<div class="sidebar__btn sidebar__btn--search">
+				<p class="sidebar__btn__content">
+					{{ $t('monitoring.search') }}
+				</p>
+			</div>
+		</lm-card>
 	</div>
 </template>
 
@@ -37,7 +71,7 @@ export default Vue.extend({
 		reporter: 'XXXXXXXXXXXXXXXX',
 		uuidReported: '6ee9150c-b99c-4d7f-9980-eb05c0c603e1',
 		lastMessage:
-			'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW',
+			'This is my really long message that goes over the boundaries of this chat',
 		reportId: '123456',
 		chatlogId: '654321',
 		isAvailable: true
@@ -74,7 +108,101 @@ export default Vue.extend({
 		.sidebar {
 			width: 350px;
 			margin-left: 25px;
-			height: 400px;
+			height: 270px;
+			position: sticky;
+			top: 100px;
+
+			p {
+				font-family: 'Rubik';
+				font-size: 18px;
+			}
+
+			.sidebar__header {
+				color: $lmColor3;
+				text-transform: uppercase;
+				margin-top: -5px;
+				font-size: 18px;
+			}
+
+			.sidebar__divider {
+				margin-top: 10px;
+				margin-bottom: 20px;
+
+				hr {
+					position: absolute;
+					width: 100%;
+					margin-left: -10px;
+					border: none;
+					border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+				}
+			}
+
+			.sidebar__stat {
+				&.wrapper {
+					display: flex;
+					justify-content: space-between;
+					font-size: 18px;
+				}
+			}
+
+			.sidebar__btn {
+				display: flex;
+				justify-content: center;
+				margin-top: 10px;
+				margin-bottom: 15px;
+
+				&.sidebar__btn--queue {
+					.sidebar__btn__content {
+						&.available {
+							background-color: $lmSuccess;
+						}
+
+						&.unavailable {
+							background-color: $lmError;
+						}
+					}
+				}
+
+				.sidebar__btn__content {
+					cursor: pointer;
+					background-color: $lmColor2;
+					padding: 4px 10px;
+					border-radius: 5px;
+					box-shadow: 0px 2px rgba($color: #000000, $alpha: 0.5);
+					color: white;
+					font-size: 14px;
+				}
+			}
+
+			.sidebar__input-label {
+				margin-top: 25px;
+			}
+
+			.sidebar__input {
+				border: none;
+				background: white;
+				// box-shadow: 0px 0px 3px rgba($color: #000000, $alpha: 0.2);
+				border: 1px solid rgba($color: #000000, $alpha: 0.3);
+				width: 100%;
+				height: 30px;
+				text-indent: 10px;
+				transition: box-shadow 0.175s ease-out;
+				font-family: 'Rubik';
+				font-size: 14px;
+				margin-top: 5px;
+				border-radius: 2px;
+
+				&::placeholder {
+					font-family: 'Rubik';
+					font-size: 14px;
+				}
+
+				&:focus {
+					outline: none;
+					box-shadow: 0px 0px 0px 2px
+						rgba($color: $lmColor2, $alpha: 0.4);
+				}
+			}
 		}
 	}
 }

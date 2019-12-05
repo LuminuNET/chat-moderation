@@ -26,13 +26,13 @@ export default Vue.extend({
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
 	overflow-y: scroll;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: $background;
-	box-sizing: border-box;
 }
 
 .container {
