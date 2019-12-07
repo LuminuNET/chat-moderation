@@ -12,32 +12,24 @@
 				<h4 class="info-group__title">
 					{{ $t('monitoring.reportedPlayer') }}
 				</h4>
-				<p class="info-group__content">
-					{{ reported }}
-				</p>
+				<p class="info-group__content">{{ reported }}</p>
 			</div>
 			<div class="info-group info-group--reporter">
 				<h4 class="info-group__title">
 					{{ $t('monitoring.reportedFrom') }}
 				</h4>
-				<p class="info-group__content">
-					{{ reporter }}
-				</p>
+				<p class="info-group__content">{{ reporter }}</p>
 			</div>
 			<div class="info-group info-group--last-message">
 				<div>
 					<h4 class="info-group__title">
 						{{ $t('monitoring.lastMessage') }}
 					</h4>
-					<p class="info-group__content">
-						{{ lastMessage }}
-					</p>
+					<p class="info-group__content">{{ lastMessage }}</p>
 				</div>
 			</div>
 			<div class="info-group info-group--status">
-				<h4 class="info-group__title">
-					{{ $t('monitoring.status') }}
-				</h4>
+				<h4 class="info-group__title">{{ $t('monitoring.status') }}</h4>
 				<p class="info-group__content">
 					{{
 						$t(
@@ -51,7 +43,10 @@
 				class="info-btn action-btn"
 				:class="isAvailable ? 'available' : 'unavailable'"
 			>
-				<p class="action-btn__text">
+				<p
+					class="action-btn__text"
+					@click="isAvailable ? takeOver() : ''"
+				>
 					{{
 						$t(
 							'monitoring.' +
@@ -139,16 +134,26 @@
 			justify-content: center;
 			border-radius: 5px;
 			cursor: pointer;
-			box-shadow: 0px 2px rgba($color: #000000, $alpha: 0.5);
 			color: white;
 			font-weight: 600;
+			transition: background-color 0.1s ease-in;
 
 			&.available {
 				background-color: $lmSuccess;
+				box-shadow: 0px 2px rgba($color: $lmSuccessDarken, $alpha: 1);
+
+				&:hover {
+					background-color: $lmSuccessDarken;
+				}
 			}
 
 			&.unavailable {
 				background-color: $lmError;
+				box-shadow: 0px 2px rgba($color: $lmErrorDarken, $alpha: 1);
+
+				&:hover {
+					background-color: $lmErrorDarken;
+				}
 			}
 		}
 	}
@@ -192,6 +197,11 @@ export default Vue.extend({
 		isAvailable: {
 			type: Boolean,
 			required: true
+		}
+	},
+	methods: {
+		takeOver(): void {
+			this.$router.push({ path: '/' + this.chatlogId });
 		}
 	}
 });

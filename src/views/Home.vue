@@ -155,10 +155,22 @@ export default Vue.extend({
 					.sidebar__btn__content {
 						&.available {
 							background-color: $lmSuccess;
+							box-shadow: 0px 2px
+								rgba($color: $lmSuccessDarken, $alpha: 1);
+
+							&:hover {
+								background-color: $lmSuccessDarken;
+							}
 						}
 
 						&.unavailable {
 							background-color: $lmError;
+							box-shadow: 0px 2px
+								rgba($color: $lmErrorDarken, $alpha: 1);
+
+							&:hover {
+								background-color: $lmErrorDarken;
+							}
 						}
 					}
 				}
@@ -168,9 +180,14 @@ export default Vue.extend({
 					background-color: $lmColor2;
 					padding: 4px 10px;
 					border-radius: 5px;
-					box-shadow: 0px 2px rgba($color: #000000, $alpha: 0.5);
+					box-shadow: 0px 2px rgba($color: $lmColor3, $alpha: 1);
 					color: white;
 					font-size: 14px;
+					transition: background-color 0.1s linear;
+
+					&:hover {
+						background-color: $lmColor3;
+					}
 				}
 			}
 
