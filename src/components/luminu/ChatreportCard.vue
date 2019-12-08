@@ -42,11 +42,9 @@
 			<div
 				class="info-btn action-btn"
 				:class="isAvailable ? 'available' : 'unavailable'"
+				@click="isAvailable ? takeOver() : ''"
 			>
-				<p
-					class="action-btn__text"
-					@click="isAvailable ? takeOver() : ''"
-				>
+				<p class="action-btn__text">
 					{{
 						$t(
 							'monitoring.' +
@@ -95,7 +93,7 @@
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				overflow: hidden;
-				max-width: 96%;
+				max-width: 100%;
 				font-family: 'Rubik';
 				font-size: 16px;
 			}

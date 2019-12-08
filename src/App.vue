@@ -35,6 +35,58 @@ body {
 	background-color: $background;
 }
 
+.view {
+	padding-top: 30px;
+
+	&.wrapper {
+		display: flex;
+
+		.main {
+			width: 100%;
+
+			.main__header {
+				font-size: 16px;
+				font-family: 'Segoe UI';
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+		}
+
+		.sidebar {
+			width: 350px;
+			margin-left: 25px;
+			height: 270px;
+			position: sticky;
+			top: 100px;
+
+			p {
+				font-family: 'Rubik';
+				font-size: 18px;
+			}
+
+			.sidebar__header {
+				color: $lmColor3;
+				text-transform: uppercase;
+				margin-top: -5px;
+				font-size: 18px;
+			}
+
+			.sidebar__divider {
+				margin-top: 10px;
+				margin-bottom: 20px;
+
+				hr {
+					position: absolute;
+					width: 100%;
+					margin-left: -10px;
+					border: none;
+					border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
+				}
+			}
+		}
+	}
+}
+
 .container {
 	max-width: $defaultMaxWidth;
 	margin: 0 auto;
