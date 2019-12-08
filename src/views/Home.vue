@@ -1,7 +1,7 @@
 <template>
-	<div class="home wrapper container">
-		<div class="active-chatreports">
-			<h3 class="active-chatreports__header">
+	<div class="view home wrapper container">
+		<div class="main active-chatreports">
+			<h3 class="main__header active-chatreports__header">
 				{{ $t('monitoring.activeChatreports') }}
 			</h3>
 			<lm-chatreport-card
@@ -83,21 +83,8 @@ export default Vue.extend({
 @import '../scss/_variables.scss';
 
 .home {
-	margin-top: 30px;
-
 	&.wrapper {
-		display: flex;
-
 		.active-chatreports {
-			width: 100%;
-
-			.active-chatreports__header {
-				font-size: 16px;
-				font-family: 'Segoe UI';
-				font-weight: 600;
-				margin-bottom: 10px;
-			}
-
 			.card {
 				margin-bottom: 25px;
 			}
@@ -106,37 +93,6 @@ export default Vue.extend({
 		}
 
 		.sidebar {
-			width: 350px;
-			margin-left: 25px;
-			height: 270px;
-			position: sticky;
-			top: 100px;
-
-			p {
-				font-family: 'Rubik';
-				font-size: 18px;
-			}
-
-			.sidebar__header {
-				color: $lmColor3;
-				text-transform: uppercase;
-				margin-top: -5px;
-				font-size: 18px;
-			}
-
-			.sidebar__divider {
-				margin-top: 10px;
-				margin-bottom: 20px;
-
-				hr {
-					position: absolute;
-					width: 100%;
-					margin-left: -10px;
-					border: none;
-					border-top: 1px solid rgba($color: #000000, $alpha: 0.3);
-				}
-			}
-
 			.sidebar__stat {
 				&.wrapper {
 					display: flex;

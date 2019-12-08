@@ -8,7 +8,7 @@
 						:class="{ active: active === index }"
 					>
 						<div class="short-link">
-							<a :href="link.to">{{
+							<a @click="openLink(link)">{{
 								$t('navigation.' + link.name)
 							}}</a>
 						</div>
@@ -48,6 +48,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import TLink from '@/types/LinkType';
+
 export default Vue.extend({
 	name: 'LmStickyHeader',
 	data: () => ({
@@ -72,7 +74,16 @@ export default Vue.extend({
 			}
 		],
 		active: -1
-	})
+	}),
+	methods: {
+		openLink(link: TLink): void {
+			if (link.isExternal) {
+				window.open(link.to, '_blank');
+			} else {
+				this.$router.push({ path: link.to });
+			}
+		}
+	}
 });
 </script>
 
