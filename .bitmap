@@ -13,6 +13,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "kennytv.luminu/link-type@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/types/LinkType.ts",
+                "test": false,
+                "name": "LinkType.ts"
+            }
+        ],
+        "mainFile": "src/types/LinkType.ts",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "kennytv.luminu/lm-header@1.0.3": {
         "files": [
             {
@@ -22,6 +34,18 @@
             }
         ],
         "mainFile": "src/components/layout/Header.vue",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "kennytv.luminu/sticky-header@1.0.0": {
+        "files": [
+            {
+                "relativePath": "src/components/layout/StickyHeader.vue",
+                "test": false,
+                "name": "StickyHeader.vue"
+            }
+        ],
+        "mainFile": "src/components/layout/StickyHeader.vue",
         "origin": "AUTHORED",
         "exported": true
     },

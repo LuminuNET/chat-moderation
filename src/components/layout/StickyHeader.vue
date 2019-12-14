@@ -36,11 +36,13 @@
 					</div>
 				</li>
 
-				<li class="user-auth">
-					<p>
-						{{ $t('navigation.login') }}
-					</p>
-				</li>
+				<slot>
+					<li class="user-auth">
+						<p>
+							{{ $t('navigation.login') }}
+						</p>
+					</li>
+				</slot>
 			</ul>
 		</div>
 	</nav>
@@ -48,10 +50,20 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import TLink from '@/types/LinkType';
+import TLink from '../../types/LinkType';
 
 export default Vue.extend({
 	name: 'LmStickyHeader',
+	props: {
+		links: {
+			type: Array,
+			required: true
+		},
+		active: {
+			type: Number,
+			default: -1
+		}
+	},
 	data: () => ({
 		links: [
 			{
@@ -88,7 +100,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '@/scss/_variables.scss';
+@import '../../scss/_variables.scss';
 
 nav {
 	position: sticky;
