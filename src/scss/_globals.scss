@@ -1,0 +1,29 @@
+@import './_variables.scss';
+
+// GLOBALS
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-y: scroll;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: $background;
+}
+
+.container {
+	max-width: $defaultMaxWidth;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: $breakpoint) {
+	.container {
+		max-width: 95%;
+	}
+}
+
+.view {
+	padding-top: 30px;
+}

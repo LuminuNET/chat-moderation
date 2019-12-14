@@ -9,10 +9,12 @@
 		"test:unit": "vue-cli-service test:unit"
 	},
 	"dependencies": {
+		"@bit/kennytv.luminu._globals": "^1.0.0",
 		"@bit/kennytv.luminu.sticky-header": "^1.0.0",
 		"@fortawesome/fontawesome-svg-core": "^1.2.25",
 		"@fortawesome/free-solid-svg-icons": "^5.11.2",
 		"@fortawesome/vue-fontawesome": "^0.1.8",
+		"@keimeno/scss": "^1.0.0",
 		"core-js": "^3.4.3",
 		"vue": "^2.6.10",
 		"vue-class-component": "^7.0.2",
@@ -50,15 +52,7 @@
 			"@vue/prettier",
 			"@vue/typescript"
 		],
-		"rules": {
-			"quotes": [
-				2,
-				"single",
-				{
-					"avoidEscape": true
-				}
-			]
-		},
+		"rules": {},
 		"parserOptions": {
 			"parser": "@typescript-eslint/parser"
 		},
