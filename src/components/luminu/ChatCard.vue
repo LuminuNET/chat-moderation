@@ -9,23 +9,19 @@
 				:alt="`Skull of ${name}`"
 			/>
 			<div class="info-group info-group--name">
-				<h4 class="info-group__title">{{ $t('chatlog.player') }}</h4>
+				<h4 class="info-group__title">{{ $t("chatlog.player") }}</h4>
 				<p class="info-group__content">{{ name }}</p>
 			</div>
 			<div class="info-group info-group--message">
 				<div>
-					<h4 class="info-group__title">
-						{{ $t('chatlog.message') }}
-					</h4>
+					<h4 class="info-group__title">{{ $t("chatlog.message") }}</h4>
 					<p class="info-group__content">{{ message }}</p>
 				</div>
 			</div>
 			<div class="info-group info-group--timestamp">
 				<div>
-					<h4 class="info-group__title">{{ $t('chatlog.time') }}</h4>
-					<p class="info-group__content">
-						{{ formattedTimestamp() }}
-					</p>
+					<h4 class="info-group__title">{{ $t("chatlog.time") }}</h4>
+					<p class="info-group__content">{{ formattedTimestamp() }}</p>
 				</div>
 			</div>
 		</div>
@@ -33,12 +29,12 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../scss/_variables.scss';
+@import "~@luminu/ui-kit/scss/_variables.scss";
 
 .lm-chat-card {
 	.lm-chat-card__content {
 		display: grid;
-		grid-template-areas: 'img name message timestamp';
+		grid-template-areas: "img name message timestamp";
 		grid-template-columns: 64px 140px 1fr 100px;
 
 		.info-img {
@@ -64,7 +60,7 @@
 				font-weight: 400;
 				color: rgba($color: #000000, $alpha: 0.5);
 				font-size: 14px;
-				font-family: 'Rubik';
+				font-family: "Rubik";
 			}
 
 			.info-group__content {
@@ -72,7 +68,7 @@
 				white-space: nowrap;
 				overflow: hidden;
 				max-width: 100%;
-				font-family: 'Rubik';
+				font-family: "Rubik";
 				font-size: 16px;
 			}
 		}
@@ -95,7 +91,7 @@
 					overflow: initial;
 					word-break: break-word;
 					max-width: 100%;
-					font-family: 'Rubik';
+					font-family: "Rubik";
 					font-size: 16px;
 				}
 			}
@@ -109,11 +105,11 @@
 </style>
 
 <script lang="ts">
-import Vue from 'vue';
-import LmCard from '@/components/base/Card.vue';
+import Vue from "vue";
+import { LmCard } from "@luminu/components";
 
 export default Vue.extend({
-	name: 'LmChatCard',
+	name: "LmChatCard",
 	components: {
 		LmCard
 	},
@@ -146,7 +142,7 @@ export default Vue.extend({
 			const minutes: number = this.timestamp.getMinutes();
 			// @ts-ignore
 			const seconds: number = this.timestamp.getSeconds();
-			return hours + ':' + minutes + ':' + seconds;
+			return hours + ":" + minutes + ":" + seconds;
 		}
 	}
 });

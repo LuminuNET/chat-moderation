@@ -1,21 +1,10 @@
 # Chat SPA
 
-## IMPORTANT NOTICE
-
-TODO: Get custom directory for this.
-This is the source project for the header and sticky-header bit shared component.
-Relevant files:
-
-```
-src/
-	components/layout/
-						Header.vue
-						StickyHeader.vue
-	scss/_variables.scss
-	types/LinkType.ts
-```
-
 ## Setup
+
+* Preferred node version: v10.11.0 and npm version: v6.4.1
+* Login to the luminu repo for scope @luminu by doing `npm login --scope=@luminu --registry=http://repo.luminu.net/repository/luminu-node/`
+* After that enter `npm i`
 
 ### Development environment
 

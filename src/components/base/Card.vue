@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from "vue";
 export default Vue.extend({
-	name: 'LmCard',
+	name: "LmCard",
 	props: {
 		highlight: {
 			type: Boolean,
@@ -20,7 +20,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '../../scss/_variables.scss';
+@import "../../scss/_variables.scss";
 
 .lm-card {
 	border-radius: 4px;
@@ -28,7 +28,6 @@ export default Vue.extend({
 	background-color: white;
 	box-shadow: 0px 1px 2px rgba($color: #000000, $alpha: 0.1);
 	border-top: 5px solid $lmColor3;
-	// overflow-x: hidden;
 
 	&.highlight {
 		border-top: 5px solid $lmColor4;

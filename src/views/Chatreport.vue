@@ -1,9 +1,9 @@
 <template>
 	<div class="view chatreport wrapper container">
 		<div class="main chatlog">
-			<h3 class="main__header active-chatreports__header">
-				{{ $t('chatlog.chatlog') }} #{{ $route.params.id }}
-			</h3>
+			<h3
+				class="main__header active-chatreports__header"
+			>{{ $t('chatlog.chatlog') }} #{{ $route.params.id }}</h3>
 			<lm-chat-card
 				v-for="i in 8"
 				:key="i"
@@ -53,9 +53,7 @@
 
 			<!-- Mute Dropdown -->
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type sidebar__dropdown__type">
-					{{ $t('chatlog.ban') }}:
-				</p>
+				<p class="sidebar__stat__type sidebar__dropdown__type">{{ $t('chatlog.ban') }}:</p>
 				<div
 					class="sidebar__stat__value sidebar__dropdown error"
 					:class="{ active: isActive }"
@@ -73,51 +71,45 @@
 								v-for="(value, key, index) in otherReasons"
 								:key="index"
 								@click="updateActiveReason(key)"
-							>
-								{{ key }}
-							</li>
+							>{{ key }}</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type sidebar__btn vanish">
-					{{ $t('chatlog.deny') }}
-				</p>
-				<p class="sidebar__stat__value sidebar__btn success">
-					{{ $t('chatlog.accept') }}
-				</p>
+				<p class="sidebar__stat__type sidebar__btn vanish">{{ $t('chatlog.deny') }}</p>
+				<p class="sidebar__stat__value sidebar__btn success">{{ $t('chatlog.accept') }}</p>
 			</div>
 		</lm-card>
 	</div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import LmChatCard from '@/components/luminu/ChatCard.vue';
-import LmCard from '@/components/base/Card.vue';
+import Vue from "vue";
+import LmChatCard from "@/components/luminu/ChatCard.vue";
+import LmCard from "@/components/base/Card.vue";
 
 export default Vue.extend({
-	name: 'home',
+	name: "home",
 	components: {
 		LmChatCard,
 		LmCard
 	},
 	data: () => ({
-		name: 'Keimeno',
-		uuid: '6ee9150c-b99c-4d7f-9980-eb05c0c603e1',
+		name: "Keimeno",
+		uuid: "6ee9150c-b99c-4d7f-9980-eb05c0c603e1",
 		message:
-			'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nemo velit ea doloribus.',
+			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nemo velit ea doloribus.",
 		timestamp: new Date(1549152000),
 		isHighlighted: true,
 		isActive: false,
-		activeReason: 'Provokation',
+		activeReason: "Provokation",
 		otherReasons: {
-			Volksverhetzung: '',
-			Werbung: '',
-			Spamming: '',
-			Beleidigung: ''
+			Volksverhetzung: "",
+			Werbung: "",
+			Spamming: "",
+			Beleidigung: ""
 		}
 	}),
 	methods: {
@@ -127,14 +119,14 @@ export default Vue.extend({
 			// @ts-ignore
 			delete this.otherReasons[reason];
 			// @ts-ignore
-			this.otherReasons[oldReason] = '';
+			this.otherReasons[oldReason] = "";
 		}
 	}
 });
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/_variables.scss';
+@import "../scss/_variables.scss";
 
 .chatreport {
 	&.wrapper {

@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import LmHeader from "@/components/layout/Header.vue";
+import { LmHeader } from "@luminu/components";
 import LmCustomStickyHeader from "@/components/layout/CustomStickyHeader.vue";
 
 export default Vue.extend({
@@ -20,7 +20,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import "~@keimeno/scss/_globals.scss";
+@import "~@luminu/ui-kit/scss/_globals.scss";
 
 .view {
 	&.wrapper {
