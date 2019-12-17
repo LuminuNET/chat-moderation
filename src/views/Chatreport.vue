@@ -1,9 +1,9 @@
 <template>
 	<div class="view chatreport wrapper container">
 		<div class="main chatlog">
-			<h3
-				class="main__header active-chatreports__header"
-			>{{ $t('chatlog.chatlog') }} #{{ $route.params.id }}</h3>
+			<h3 class="main__header active-chatreports__header">
+				{{ $t("chatlog.chatlog") }} #{{ $route.params.id }}
+			</h3>
 			<lm-chat-card
 				v-for="i in 8"
 				:key="i"
@@ -21,26 +21,26 @@
 				<hr />
 			</div>
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type">{{ $t('chatlog.reported') }}:</p>
+				<p class="sidebar__stat__type">{{ $t("chatlog.reported") }}:</p>
 				<p class="sidebar__stat__value">Keimeno</p>
 			</div>
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type">{{ $t('chatlog.reporter') }}:</p>
+				<p class="sidebar__stat__type">{{ $t("chatlog.reporter") }}:</p>
 				<p class="sidebar__stat__value">Noaaah</p>
 			</div>
 			<div class="sidebar__divider">
 				<hr />
 			</div>
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type">{{ $t('chatlog.time') }}:</p>
+				<p class="sidebar__stat__type">{{ $t("chatlog.time") }}:</p>
 				<p class="sidebar__stat__value">0000/00/00 23:23</p>
 			</div>
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type">{{ $t('chatlog.server') }}:</p>
+				<p class="sidebar__stat__type">{{ $t("chatlog.server") }}:</p>
 				<p class="sidebar__stat__value">lm_2404</p>
 			</div>
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type">{{ $t('chatlog.uniqueId') }}:</p>
+				<p class="sidebar__stat__type">{{ $t("chatlog.uniqueId") }}:</p>
 				<p class="sidebar__stat__value">7dh72k</p>
 			</div>
 			<div class="sidebar__divider">
@@ -53,7 +53,9 @@
 
 			<!-- Mute Dropdown -->
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type sidebar__dropdown__type">{{ $t('chatlog.ban') }}:</p>
+				<p class="sidebar__stat__type sidebar__dropdown__type">
+					{{ $t("chatlog.ban") }}:
+				</p>
 				<div
 					class="sidebar__stat__value sidebar__dropdown error"
 					:class="{ active: isActive }"
@@ -71,15 +73,21 @@
 								v-for="(value, key, index) in otherReasons"
 								:key="index"
 								@click="updateActiveReason(key)"
-							>{{ key }}</li>
+							>
+								{{ key }}
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 
 			<div class="sidebar__stat wrapper">
-				<p class="sidebar__stat__type sidebar__btn vanish">{{ $t('chatlog.deny') }}</p>
-				<p class="sidebar__stat__value sidebar__btn success">{{ $t('chatlog.accept') }}</p>
+				<p class="sidebar__stat__type sidebar__btn vanish">
+					{{ $t("chatlog.deny") }}
+				</p>
+				<p class="sidebar__stat__value sidebar__btn success">
+					{{ $t("chatlog.accept") }}
+				</p>
 			</div>
 		</lm-card>
 	</div>
@@ -126,7 +134,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/_variables.scss";
+@import "~@luminu/ui-kit/scss/_variables.scss";
 
 .chatreport {
 	&.wrapper {
