@@ -9,16 +9,22 @@
 				:alt="`Skull of ${reported}`"
 			/>
 			<div class="info-group info-group--reported">
-				<h4 class="info-group__title">{{ $t("monitoring.reportedPlayer") }}</h4>
+				<h4 class="info-group__title">
+					{{ $t("monitoring.reportedPlayer") }}
+				</h4>
 				<p class="info-group__content">{{ reported }}</p>
 			</div>
 			<div class="info-group info-group--reporter">
-				<h4 class="info-group__title">{{ $t("monitoring.reportedFrom") }}</h4>
+				<h4 class="info-group__title">
+					{{ $t("monitoring.reportedFrom") }}
+				</h4>
 				<p class="info-group__content">{{ reporter }}</p>
 			</div>
 			<div class="info-group info-group--last-message">
 				<div>
-					<h4 class="info-group__title">{{ $t("monitoring.lastMessage") }}</h4>
+					<h4 class="info-group__title">
+						{{ $t("monitoring.lastMessage") }}
+					</h4>
 					<p class="info-group__content">{{ lastMessage }}</p>
 				</div>
 			</div>
@@ -26,10 +32,10 @@
 				<h4 class="info-group__title">{{ $t("monitoring.status") }}</h4>
 				<p class="info-group__content">
 					{{
-					$t(
-					"monitoring." +
-					(isAvailable ? "available" : "inProgress")
-					)
+						$t(
+							"monitoring." +
+								(isAvailable ? "available" : "inProgress")
+						)
 					}}
 				</p>
 			</div>
@@ -40,10 +46,10 @@
 			>
 				<p class="action-btn__text">
 					{{
-					$t(
-					"monitoring." +
-					(isAvailable ? "takeOver" : "unavailable")
-					)
+						$t(
+							"monitoring." +
+								(isAvailable ? "takeOver" : "unavailable")
+						)
 					}}
 				</p>
 			</div>
@@ -154,7 +160,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-// @ts-ignore
 import { LmCard } from "@luminu/components";
 
 export default Vue.extend({
