@@ -1,43 +1,28 @@
 <template>
 	<div id="app">
 		<lm-header :image="require('@/assets/style-logo.png')" />
-		<lm-sticky-header />
+		<lm-custom-sticky-header />
 		<router-view />
 	</div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import LmHeader from '@/components/layout/Header.vue';
-import LmStickyHeader from '@/components/layout/StickyHeader.vue';
+import Vue from "vue";
+import { LmHeader } from "@luminu/components";
+import LmCustomStickyHeader from "@/components/layout/CustomStickyHeader.vue";
 
 export default Vue.extend({
 	components: {
 		LmHeader,
-		LmStickyHeader
+		LmCustomStickyHeader
 	}
 });
 </script>
 
 <style lang="scss">
-@import '@/scss/_variables.scss';
-
-// GLOBALS
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	overflow-y: scroll;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: $background;
-}
+@import "~@luminu/ui-kit/scss/_globals.scss";
 
 .view {
-	padding-top: 30px;
-
 	&.wrapper {
 		display: flex;
 
@@ -46,7 +31,7 @@ body {
 
 			.main__header {
 				font-size: 16px;
-				font-family: 'Segoe UI';
+				font-family: "Segoe UI";
 				font-weight: 600;
 				margin-bottom: 10px;
 			}
@@ -60,7 +45,7 @@ body {
 			top: 100px;
 
 			p {
-				font-family: 'Rubik';
+				font-family: "Rubik";
 				font-size: 18px;
 			}
 
@@ -84,17 +69,6 @@ body {
 				}
 			}
 		}
-	}
-}
-
-.container {
-	max-width: $defaultMaxWidth;
-	margin: 0 auto;
-}
-
-@media screen and (max-width: $breakpoint) {
-	.container {
-		max-width: 95%;
 	}
 }
 </style>

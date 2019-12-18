@@ -10,31 +10,31 @@
 			/>
 			<div class="info-group info-group--reported">
 				<h4 class="info-group__title">
-					{{ $t('monitoring.reportedPlayer') }}
+					{{ $t("monitoring.reportedPlayer") }}
 				</h4>
 				<p class="info-group__content">{{ reported }}</p>
 			</div>
 			<div class="info-group info-group--reporter">
 				<h4 class="info-group__title">
-					{{ $t('monitoring.reportedFrom') }}
+					{{ $t("monitoring.reportedFrom") }}
 				</h4>
 				<p class="info-group__content">{{ reporter }}</p>
 			</div>
 			<div class="info-group info-group--last-message">
 				<div>
 					<h4 class="info-group__title">
-						{{ $t('monitoring.lastMessage') }}
+						{{ $t("monitoring.lastMessage") }}
 					</h4>
 					<p class="info-group__content">{{ lastMessage }}</p>
 				</div>
 			</div>
 			<div class="info-group info-group--status">
-				<h4 class="info-group__title">{{ $t('monitoring.status') }}</h4>
+				<h4 class="info-group__title">{{ $t("monitoring.status") }}</h4>
 				<p class="info-group__content">
 					{{
 						$t(
-							'monitoring.' +
-								(isAvailable ? 'available' : 'inProgress')
+							"monitoring." +
+								(isAvailable ? "available" : "inProgress")
 						)
 					}}
 				</p>
@@ -47,8 +47,8 @@
 				<p class="action-btn__text">
 					{{
 						$t(
-							'monitoring.' +
-								(isAvailable ? 'takeOver' : 'unavailable')
+							"monitoring." +
+								(isAvailable ? "takeOver" : "unavailable")
 						)
 					}}
 				</p>
@@ -58,12 +58,12 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../scss/_variables.scss';
+@import "~@luminu/ui-kit/scss/_variables.scss";
 
 .lm-chatreport-card {
 	.lm-chatreport-card__content {
 		display: grid;
-		grid-template-areas: 'img reported reporter lastMessage status btn';
+		grid-template-areas: "img reported reporter lastMessage status btn";
 		grid-template-columns: 64px 140px 140px 1fr 100px 100px;
 
 		.info-img {
@@ -86,7 +86,7 @@
 				font-weight: 400;
 				color: rgba($color: #000000, $alpha: 0.5);
 				font-size: 14px;
-				font-family: 'Rubik';
+				font-family: "Rubik";
 			}
 
 			.info-group__content {
@@ -94,7 +94,7 @@
 				white-space: nowrap;
 				overflow: hidden;
 				max-width: 100%;
-				font-family: 'Rubik';
+				font-family: "Rubik";
 				font-size: 16px;
 			}
 		}
@@ -159,11 +159,11 @@
 </style>
 
 <script lang="ts">
-import Vue from 'vue';
-import LmCard from '@/components/base/Card.vue';
+import Vue from "vue";
+import { LmCard } from "@luminu/components";
 
 export default Vue.extend({
-	name: 'LmChatreportCard',
+	name: "LmChatreportCard",
 	components: {
 		LmCard
 	},
@@ -199,7 +199,7 @@ export default Vue.extend({
 	},
 	methods: {
 		takeOver(): void {
-			this.$router.push({ path: '/' + this.chatlogId });
+			this.$router.push({ path: "/" + this.chatlogId });
 		}
 	}
 });
