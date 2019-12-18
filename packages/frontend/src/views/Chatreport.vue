@@ -96,7 +96,7 @@
 <script lang="ts">
 import Vue from "vue";
 import LmChatCard from "@/components/luminu/ChatCard.vue";
-import LmCard from "@/components/base/Card.vue";
+import { LmCard } from "@luminu/components";
 
 export default Vue.extend({
 	name: "home",
